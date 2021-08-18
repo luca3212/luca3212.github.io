@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui' />
+        <title>Lista de Tareas</title>
+
+        
+	    <link rel="stylesheet" href="styleLT.css" />
+    </head>
+    <body>
+
+        <div class="contenedor">
+            <div class="central">
+                <div class="titulo">
+                    <h1>LISTA DE TAREAS</h1>
+                </div>
+                <div class="formulario">
+                    <form>
+                        <input type="text" id="nombreTarea">
+                        <input type="button" id="agregarTarea" class="boton" value="ADD" onclick="agregar()">
+                    </form>
+                </div>
+
+                <div class="divLista">
+                    <ul id="ListaTareas">
+                        <li>
+                            <div>
+                                <input type="checkbox">
+                                <p>Tarea 1</p>
+                            </div>
+                            <input type="button" id="boton" value="Borrar" onclick = this.parentElement.remove()>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
