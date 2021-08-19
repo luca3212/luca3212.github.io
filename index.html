@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui' />
+        <title>Lista de Tareas</title>
+
+        
+	    <link rel="stylesheet" href="styleLT.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css" />
+        
+    </head>
+    <body>
+
+        <div class="contenedor">
+            <div class="central">
+                <div class="titulo">
+                    <h1>LISTA DE TAREAS</h1>
+                </div>
+                <div class="formulario">
+                    <form>
+                        <input type="text" id="nombreTarea">
+                        <input type="button" id="agregarTarea" class="boton" value="ADD" onclick="agregar()">
+                    </form>
+                </div>
+
+                <div class="divLista">
+                    <ul id="ListaTareas">
+                        <li>
+                            <div>
+                                <input type="checkbox">
+                                <p>Tarea 1</p>
+                            </div>
+                            <button id="boton"  onclick = this.parentElement.remove()><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                            </svg></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
