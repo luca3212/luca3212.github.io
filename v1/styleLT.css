@@ -10,14 +10,12 @@ button, input[type=button] {
 }
 
 .contenedor {
-  width: 40%;
-  min-width: 400px;
+  width: 600px;
   height: auto;
 }
 
 .central {
-  width: 80%;
-  min-width: 600px;
+  width: 600px;
   height: auto;
 }
 
@@ -203,5 +201,27 @@ ul#ListaTareas > li #div-botones button {
   color: #fff;
   font-family: helvetica,arial;
   font-size: 15px;
+}
+
+@media screen and (max-width: 550px) {
+  .contenedor {
+    width: 100%;
+    min-width: 360px;
+    height: auto;
+  }
+  .central {
+    width: 100%;
+    min-width: 360px;
+    height: auto;
+  }
+  .titulo, .formulario {
+    width: 90%;
+  }
+  .divLista {
+    width: 100%;
+  }
+  .divLista > ul#ListaTareas {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=styleLT.css.map */
