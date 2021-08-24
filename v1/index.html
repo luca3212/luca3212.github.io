@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui' />
+        <title>Lista de Tareas</title>
 
+        
+	    <link rel="stylesheet" href="styleLT.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css" />
+        
+    </head>
+    <body>
+
+        <div class="contenedor">
+            <div class="central">
+                <div class="titulo">
+                    <h1>LISTA DE TAREAS</h1>
+                    <!-- boton Screen -->
+                    <button id="botonPC" onclick = "toggleFullScreen()">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z" />
+                    </svg></button>
+                    
+                </div>
+                <div class="formulario">
+                    <form action="">
+                        <input type="text" id="nombreTarea">
+                        <input type="button" id="agregarTarea" class="boton" value="ADD" onclick="agregar()">
+                    </form>
+                </div>
+
+                <div class="divLista">
+                    <ul id="ListaTareas">
+                        <li id-lista="1">
+                            <div id="div-text">
+                                <input type="checkbox">
+                                <p>Tarea 1</p>
+                            </div>
+                            
+                            <div id="div-botones">
+                                <!-- boton copiar -->
+                                <button id="boton" onclick="copiarLista(1)" onclick = ""><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z" />
+                                </svg></button>
+
+                                <!-- boton compartir -->
+                                <button id="boton" onclick="compartirLista(1)"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" />
+                                </svg></button>
+
+                                <!-- boton borrar -->
+                                <button id="boton" onclick="deleteLista(1)"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                                </svg></button>    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

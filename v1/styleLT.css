@@ -1,0 +1,195 @@
+* {
+  margin: 0px auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button, input[type=button] {
+  cursor: pointer;
+}
+
+.contenedor {
+  width: 40%;
+  min-width: 400px;
+  height: auto;
+}
+
+.central {
+  width: 80%;
+  min-width: 600px;
+  height: auto;
+}
+
+.titulo {
+  width: 60%;
+  font-family: helvetica,Arial, sans-serif;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.titulo > h1 {
+  font-size: 1.8em;
+  margin: 0px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  text-align: left;
+}
+
+.titulo > button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.formulario {
+  width: 60%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.formulario form {
+  margin: 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formulario #nombreTarea {
+  border: 2px solid black;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.formulario #agregarTarea {
+  background: transparent;
+  border: 2px solid black;
+  padding: 15px;
+}
+
+.divLista {
+  width: 100%;
+  height: auto;
+}
+
+ul#ListaTareas {
+  width: 60%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: helvetica,Arial, sans-serif;
+}
+
+ul#ListaTareas > li {
+  width: 100%;
+  margin: 5px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 2px solid black;
+}
+
+ul#ListaTareas > li #div-text {
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+}
+
+ul#ListaTareas > li #div-text input[type=checkbox] {
+  width: 20%;
+  margin: 0px;
+  text-align: center;
+}
+
+ul#ListaTareas > li #div-text input:checked + p {
+  text-decoration: line-through;
+}
+
+ul#ListaTareas > li #div-text p {
+  color: #000;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+ul#ListaTareas > li #div-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+}
+
+ul#ListaTareas > li #div-botones button {
+  border: none;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  padding: 8px;
+}
+/*# sourceMappingURL=styleLT.css.map */
