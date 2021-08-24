@@ -192,4 +192,16 @@ ul#ListaTareas > li #div-botones button {
   background: transparent;
   padding: 8px;
 }
+
+#prueba {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 7px;
+}
+
+#prueba > h2 {
+  color: #fff;
+  font-family: helvetica,arial;
+  font-size: 15px;
+}
 /*# sourceMappingURL=styleLT.css.map */

@@ -69,16 +69,28 @@ function toggleFullScreen() {
     }
 }
 
+//function evento copy
+function avisoCopy(){
+    console.log('Copiado con exito.');
+
+    const divCopy = document.querySelector("#prueba");
+    
+    $("#prueba").fadeIn(1500);
+    
+    setTimeout(function() {
+        $("#prueba").fadeOut(1000);
+    },1500);
+
+}
 
 //funcion copia nombre de la tarea
 function copiarLista(idCopiar) {
     var idl = document.querySelector(`[id-lista="${idCopiar}"]`);
     var text = idl.querySelector("p").textContent;
-  
     //console.log("esto es: "+text);
   
     navigator.clipboard.writeText(text)
-      .then(() => {console.log('Copiado con exito.');})
+      .then(() => {avisoCopy();})
       .catch(err => console.log('Error al copiar el texto.'));
 }
 
