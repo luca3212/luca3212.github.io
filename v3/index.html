@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+
+        
+	    <!--<link rel="stylesheet" href="styleLT.css" />-->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+        <!--agregamos la font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>LISTA DE TAREAS</h1>
+            <!-- boton Screen -->
+            <button id="botonPC" class="solo-icono" onclick = "toggleFullScreen()">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z" />
+                </svg>
+            </button>        
+        </header>
+
+        <div id="AddTask">
+            <form action="">
+                <input type="text" id="nombreTarea">
+               
+                <button id="agregarTarea" class="solo-icono" onclick = "agregar()">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <div id="Divider">
+            <div id="linea"></div>
+        </div>
+
+        <div id="Task">
+            <ul id="ListaTareas"></ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
