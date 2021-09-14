@@ -1,0 +1,256 @@
+//Definicion de colores
+$Negro    : rgba(34,34,34,1) ;            
+$Negro50  : rgba(34,34,34,0.5) ;       
+$Negro10  : rgba(34,34,34,0.1) ;       
+$Blanco   : rgba(255,255,255,1) ;       
+$Blanco50 : rgba(255,255,255,0.5) ;           
+$Blanco20 : rgba(255,255,255,0.2) ; 
+
+//configuracion botones
+@mixin btnStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    background: transparent;
+    border: 1px solid $Negro;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+//configuracion header-AddTask-Divider-Task
+@mixin confInicio {
+    box-sizing: border-box;
+    width: 512px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+*{
+    margin: 0px;
+    padding: 0;
+}
+
+.contenedor{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+header{
+    @include confInicio();
+    
+    font-family: 'Roboto', sans-serif;
+    color:$Negro;
+    margin: 0px 24px 0px 24px ;
+    justify-content: space-between;
+    padding: 8px;
+    h1{
+        text-align: left;
+        font-size: 36px;
+    }
+}
+
+#AddTask{
+    @include confInicio();
+
+    position: sticky;
+    top: 0;
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        
+        #nombreTarea{
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            flex-grow: 2;
+            color: $Negro;
+            margin-right:8px;
+            padding: 8px;
+            border: none;
+            background: $Negro10;
+            border-radius: 4px;
+        }
+    }
+}
+
+#Divider{
+    @include confInicio();
+    
+    justify-content: center;
+    #linea{
+        width: 100%;
+        margin: 8px;
+        background-color: $Negro10;
+        height: 2px;
+    }
+}
+
+#Task{
+    @include confInicio();
+    
+    flex-direction: column;
+    padding: 8px;
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        > li{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $Negro10;
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+
+            #div-text{
+                display: flex;
+                flex-direction: row;
+                align-items:center;
+                flex-grow: 2;
+                input[type=checkbox]{
+                    width: 24px;
+                    height: 24px;
+                    outline: 2px solid $Negro;
+                    margin-right: 8px;
+                }
+                input:checked + p{
+                    text-decoration: line-through;
+                }
+                p{
+                    color: $Negro;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 24px;
+                    text-align: left;
+                    flex-grow: 2;
+                }
+            }
+            #div-botones{
+                display: flex;
+                flex-direction: row;
+                align-items:center;
+                margin: 0px;
+                button{
+                    margin-left:8px;
+                }
+            }
+        }
+    }
+}
+
+.solo-texto{
+    @include btnStyle();
+
+    width: max-content;
+    padding: 8px 16px 8px 16px;
+}
+.solo-icono{
+    @include btnStyle();
+
+    width: 48px;
+    padding: 8px;
+    margin: 0px;
+}
+.icono-texto{
+    @include btnStyle();
+
+    width: max-content;
+    padding: 8px 16px 8px 16px;
+
+    .svg{
+        margin-right: 8px;
+    }
+}
+
+//Tema Dark
+@media (prefers-color-scheme: dark) {
+    body {
+      background: $Negro;
+    }
+    header{
+        color:$Blanco;
+    }
+    #AddTask{
+        form{
+            #nombreTarea{
+                color: $Blanco;
+                background:$Blanco20;
+            }
+        }
+    }
+
+    .solo-icono, .solo-texto, .icono-texto {
+        color:$Blanco;
+        border-color: $Blanco;
+    }
+
+    #Task{
+        ul{
+            > li{
+                background:$Blanco20;
+                #div-text{
+                    input[type=checkbox]{
+                        outline-color: $Blanco;
+                    }
+                    p{
+                        color: $Blanco;
+                    }
+                }
+            }
+        }
+    }
+    
+    #Divider{
+        #linea{
+            background-color: $Blanco20;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    header,#Task{
+        width: 100%;
+        padding: 8px 24px 0px 24px ;
+        margin-bottom: 16px;
+        h1{
+            font-size: 32px;
+        }
+    }
+
+    #AddTask{
+        width: 100%;
+        margin-bottom: 8px;
+        form{
+            padding:8px 24px;
+            width: 100%;
+            justify-content: space-between;
+            align-content: stretch;
+            #nombreTarea{
+              width: 50%;
+              flex-grow: none;
+            }
+        }
+    }
+
+    #Divider{
+        width: 100%;
+        margin-bottom: 8px;
+        #linea{
+            margin: 8px 24px 8px 24px;
+        }
+    }
+}
