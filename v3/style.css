@@ -61,6 +61,7 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 8px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -82,6 +83,8 @@ header h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 8px;
+  background: rgba(34, 34, 34, 0.1);
+  border-radius: 4px;
 }
 
 #AddTask form #nombreTarea {
@@ -96,8 +99,12 @@ header h1 {
   margin-right: 8px;
   padding: 8px;
   border: none;
-  background: rgba(34, 34, 34, 0.1);
-  border-radius: 4px;
+  background: transparent;
+}
+
+#AddTask form #nombreTarea:focus {
+  outline: none;
+  background: transparent;
 }
 
 #Divider {
@@ -191,6 +198,11 @@ header h1 {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+}
+
+#Task ul > li #div-text input {
+  color-scheme: light;
+  accent-color: #e8e8e8;
 }
 
 #Task ul > li #div-text input[type=checkbox] {
@@ -317,9 +329,12 @@ header h1 {
   header {
     color: white;
   }
+  #AddTask form {
+    background: rgba(255, 255, 255, 0.2);
+  }
   #AddTask form #nombreTarea {
     color: white;
-    background: rgba(255, 255, 255, 0.2);
+    background: transparent;
   }
   .solo-icono, .solo-texto, .icono-texto {
     color: white;
@@ -327,6 +342,10 @@ header h1 {
   }
   #Task ul > li {
     background: rgba(255, 255, 255, 0.2);
+  }
+  #Task ul > li #div-text input {
+    color-scheme: dark;
+    accent-color: #4e4e4e;
   }
   #Task ul > li #div-text input[type=checkbox] {
     outline-color: white;
@@ -351,9 +370,9 @@ header h1 {
   #AddTask {
     width: 100%;
     margin-bottom: 8px;
+    padding: 8px 24px 0px 24px;
   }
   #AddTask form {
-    padding: 8px 24px;
     width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;

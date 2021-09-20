@@ -20,7 +20,6 @@ $Blanco20 : rgba(255,255,255,0.2) ;
     cursor: pointer;
     box-sizing: border-box;
 }
-
 //configuracion header-AddTask-Divider-Task
 @mixin confInicio {
     box-sizing: border-box;
@@ -58,9 +57,10 @@ header{
 
 #AddTask{
     @include confInicio();
-
+    padding: 8px;
     position: sticky;
     top: 0;
+    
     form{
         width: 100%;
         display: flex;
@@ -68,7 +68,8 @@ header{
         align-items: center;
         justify-content: space-between;
         padding: 8px;
-        
+        background: $Negro10;
+        border-radius: 4px;
         #nombreTarea{
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
@@ -78,8 +79,12 @@ header{
             margin-right:8px;
             padding: 8px;
             border: none;
-            background: $Negro10;
-            border-radius: 4px;
+            background: transparent;
+
+            &:focus{
+                outline: none;
+                background: transparent;
+            }
         }
     }
 }
@@ -122,6 +127,10 @@ header{
                 flex-direction: row;
                 align-items:center;
                 flex-grow: 2;
+                input{
+                    color-scheme: light;
+                    accent-color: #e8e8e8;
+                }
                 input[type=checkbox]{
                     width: 24px;
                     height: 24px;
@@ -137,6 +146,7 @@ header{
                     font-size: 24px;
                     text-align: left;
                     flex-grow: 2;
+                    
                 }
             }
             #div-botones{
@@ -185,10 +195,13 @@ header{
         color:$Blanco;
     }
     #AddTask{
+        
         form{
+            background:$Blanco20;
             #nombreTarea{
                 color: $Blanco;
-                background:$Blanco20;
+                background: transparent;
+                
             }
         }
     }
@@ -203,6 +216,10 @@ header{
             > li{
                 background:$Blanco20;
                 #div-text{
+                    input{
+                        color-scheme: dark;
+                        accent-color: #4e4e4e;
+                    }
                     input[type=checkbox]{
                         outline-color: $Blanco;
                     }
@@ -234,8 +251,9 @@ header{
     #AddTask{
         width: 100%;
         margin-bottom: 8px;
+        padding: 8px 24px 0px 24px ;
         form{
-            padding:8px 24px;
+            
             width: 100%;
             justify-content: space-between;
             align-content: stretch;
